@@ -1,0 +1,48 @@
+{
+  "name": "lhf-cli",
+  "version": "1.0.0",
+  "description": "lhf cli",
+  "main": "index.js",
+  "scripts": {
+    "start": "node run",
+    "clear": "rimraf build",
+    "build": "npm run clear && tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "eslint src --ext .ts"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "chalk": "^2.4.2",
+    "commander": "^7.1.0",
+    "download-git-repo": "^3.0.2",
+    "inquirer": "^6.2.2",
+    "moment-helper": "0.0.2",
+    "ora": "^3.2.0",
+    "rimraf": "^3.0.2",
+    "shelljs": "^0.8.3"
+  },
+  "bin": {
+    "dkh": "./bin.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@types/node": "^12.7.8",
+    "@typescript-eslint/eslint-plugin": "^4.11.1",
+    "@typescript-eslint/parser": "^4.11.1",
+    "eslint": "^7.16.0",
+    "eslint-config-alloy": "^3.10.0",
+    "husky": "^4.3.6",
+    "ts-node": "^9.1.1",
+    "tslint": "^6.1.3",
+    "typescript": "^4.1.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run eslint",
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
+    }
+  }
+}
