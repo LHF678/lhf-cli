@@ -97,4 +97,3 @@ export default async (name: string) => {
     console.log();
   }
 };
-

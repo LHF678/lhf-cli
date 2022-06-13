@@ -1,6 +1,6 @@
 {
   "name": "lhf-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "lhf cli",
   "main": "index.js",
   "bin": {
@@ -18,11 +18,11 @@
     "url": "https://github.com/LHF678/vue2-project-work-template.git"
   },
   "dependencies": {
-    "axios": "^0.19.2",
     "chalk": "4.1.1",
     "commander": "^9.3.0",
     "dayjs": "^1.11.3",
     "download-git-repo": "^3.0.2",
+    "fs-extra": "^10.1.0",
     "inquirer": "^6.2.2",
     "moment-helper": "0.0.2",
     "ora": "5.4.0",
