@@ -1,3 +1,5 @@
+import * as dayjs from 'dayjs';
+
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const packageJson = require('../../package.json');
 
@@ -6,4 +8,9 @@ const packageJson = require('../../package.json');
  */
 export const getVersion = () => {
   return packageJson.version;
+};
+
+
+export const getTime = () => {
+  return dayjs().format('YYYY-MM-DD HH:mm:ss');
 };
