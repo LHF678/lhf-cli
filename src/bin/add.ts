@@ -5,7 +5,7 @@ import * as download from 'download-git-repo';
 import * as ora from 'ora';
 import * as chalk from 'chalk';
 import { getTime } from '../utils';
-import { template, TemplateKey } from './config';
+import { template, addChoices } from './config';
 
 
 export default async (name: string) => {
@@ -24,18 +24,14 @@ export default async (name: string) => {
   }
 
   interface InquirerPrompt {
-    type: TemplateKey
+    type: string
   }
 
   const { type }: InquirerPrompt = await inquirer.prompt([{
     type: 'list',
     name: 'type',
     message: '选择模板类型：',
-    choices: [
-      { name: '【Vue2】模板', value: 'vue2' },
-      { name: '【Vue3】模板 --- 模板搭建中', value: 'vue3' },
-      { name: '【React】模板 --- 模板搭建中', value: 'react' }
-    ],
+    choices: addChoices,
     default: 'vue2'
   }]);
 

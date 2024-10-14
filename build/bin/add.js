@@ -27,11 +27,7 @@ exports.default = async (name) => {
             type: 'list',
             name: 'type',
             message: '选择模板类型：',
-            choices: [
-                { name: '【Vue2】模板', value: 'vue2' },
-                { name: '【Vue3】模板 --- 模板搭建中', value: 'vue3' },
-                { name: '【React】模板 --- 模板搭建中', value: 'react' }
-            ],
+            choices: config_1.addChoices,
             default: 'vue2'
         }]);
     const config = config_1.template[type];
